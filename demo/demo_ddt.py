@@ -24,8 +24,11 @@ class ddtClass(unittest.TestCase):
         "preci": 0,
         "sortNum": 1
         } """
-        r = requests.post(f'{HOST}/unit/save', data=addData.encode(), headers=hearData)
-        print('r',r.json())
+        r = requests.post(f'case_name, url, data, expect_res{HOST}/unit/save', data=addData.encode(), headers=hearData)
+        # print('r',r.json())
+        case_name= '用例1'
+        url= 'unit/save'
+        log_casxe_info(case_name, url, addData, r.text)
 
     @unittest.skip("不执行第二条用例 ")
     def test_002(self):

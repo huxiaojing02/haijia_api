@@ -4,7 +4,7 @@ from lib.loginLib import login
 
 
 def sendUnitRequest(rows):
-    case_name = rows[0]
+    case_name = str(rows[0])+'---'+rows[1]
     api = rows[2]
     loginToken = login("admin", "123456")
     hearData = json.loads(rows[4])

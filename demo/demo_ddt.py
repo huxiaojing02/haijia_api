@@ -15,20 +15,7 @@ class ddtClass(unittest.TestCase):
         print('tearDown运行成功')
 
     def test_001(self):
-        hearData = {"auth-token": "5968bdc07ac8460c843f3793674d2efe",
-                    "Content-Type": "application/json"}
-        addData = """{
-        "code": "879",
-        "isBase": true,
-        "name": "千克1",
-        "preci": 0,
-        "sortNum": 1
-        } """
-        r = requests.post(f'case_name, url, data, expect_res{HOST}/unit/save', data=addData.encode(), headers=hearData)
-        # print('r',r.json())
-        case_name= '用例1'
-        url= 'unit/save'
-        log_casxe_info(case_name, url, addData, r.text)
+        print('test_001运行成功')
 
     @unittest.skip("不执行第二条用例 ")
     def test_002(self):

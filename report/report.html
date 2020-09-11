@@ -125,9 +125,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">Test Report</h1>
 <p class='attribute'><strong>测试人员 : </strong> 胡晓静</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-09-11 16:35:07</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.532814</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 10，通过 5，失败 4，错误 1，通过率= 50.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-09-11 17:45:36</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.522603</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 10，通过 6，失败 4，通过率= 60.00%</p>
 
 <p class='description'>Test Description</p>
 </div>
@@ -135,9 +135,9 @@ function html_escape(s) {
 
 
     <p id='show_detail_line'>
-    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [50.00% ]</a>
-    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 5 ]</a>
-    <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 1 ]</a>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [60.00% ]</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 6 ]</a>
+    <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 0 ]</a>
     <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 4 ]</a>
     <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 10 ]</a>
     </p>
@@ -159,43 +159,30 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='errorClass warning'>
+<tr class='failClass warning'>
     <td>demo_ddt.ddtClass</td>
     <td class="text-center">10</td>
-    <td class="text-center">5</td>
-    <td class="text-center">1</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
     <td class="text-center">4</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',10)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='ft1_1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_001</div></td>
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_001</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
-    <div id='div_ft1_1' class="collapse">  -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
-    <div id='div_ft1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
     <pre>
     
-ft1_1: setUp运行成功
+pt1_1: setUp运行成功
+test_001运行成功
 tearDown运行成功
-Traceback (most recent call last):
-  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 27, in test_001
-    r = requests.post(f'case_name, url, data, expect_res{HOST}/unit/save', data=addData.encode(), headers=hearData)
-  File "D:\software\python1\lib\site-packages\requests\api.py", line 119, in post
-    return request('post', url, data=data, json=json, **kwargs)
-  File "D:\software\python1\lib\site-packages\requests\api.py", line 61, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "D:\software\python1\lib\site-packages\requests\sessions.py", line 530, in request
-    resp = self.send(prep, **send_kwargs)
-  File "D:\software\python1\lib\site-packages\requests\sessions.py", line 637, in send
-    adapter = self.get_adapter(url=request.url)
-  File "D:\software\python1\lib\site-packages\requests\sessions.py", line 730, in get_adapter
-    raise InvalidSchema("No connection adapters were found for {!r}".format(url))
-requests.exceptions.InvalidSchema: No connection adapters were found for 'case_name, url, data, expect_reshttp://47.99.212.180:8085//unit/save'
 
 
     </pre>
@@ -218,7 +205,7 @@ requests.exceptions.InvalidSchema: No connection adapters were found for 'case_n
 ft1_2: setUp运行成功
 tearDown运行成功
 Traceback (most recent call last):
-  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 38, in test_003
+  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 25, in test_003
     self.assertEqual(1, 2, '测试用例不通过')
 AssertionError: 1 != 2 : 测试用例不通过
 
@@ -246,7 +233,7 @@ tearDown运行成功
 Traceback (most recent call last):
   File "D:\software\python1\lib\site-packages\ddt.py", line 188, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 47, in test_004
+  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 34, in test_004
     self.assertEqual(resData['status'], assertData['status'], resData['message'])
 AssertionError: 415 != 200 : 此编号已存在，请重新输入！
 
@@ -297,7 +284,7 @@ tearDown运行成功
 Traceback (most recent call last):
   File "D:\software\python1\lib\site-packages\ddt.py", line 188, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 47, in test_004
+  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 34, in test_004
     self.assertEqual(resData['status'], assertData['status'], resData['message'])
 AssertionError: 415 != 200 : 此编号已存在，请重新输入！
 
@@ -325,7 +312,7 @@ tearDown运行成功
 Traceback (most recent call last):
   File "D:\software\python1\lib\site-packages\ddt.py", line 188, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 47, in test_004
+  File "D:\python-product\haijia_API\haijia_api\demo\demo_ddt.py", line 34, in test_004
     self.assertEqual(resData['status'], assertData['status'], resData['message'])
 AssertionError: 415 != 200 : 此编号已存在，请重新输入！
 
@@ -430,10 +417,10 @@ tearDown运行成功
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>10</td>
-    <td>5</td>
-    <td>1</td>
+    <td>6</td>
+    <td>0</td>
     <td>4</td>
-    <td>通过率：50.00%</td>
+    <td>通过率：60.00%</td>
 </tr>
 </table>
 

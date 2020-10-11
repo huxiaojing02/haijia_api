@@ -1,5 +1,5 @@
 import unittest
-from haijia_api.lib.excleMangerLib import *
+from lib.excleMangerLib import *
 from ddt import ddt, data
 
 excelData = readExcel(excel_Path, '计量单位')

@@ -1,6 +1,6 @@
 import unittest
 from AqiHTMLTestRunner import HTMLTestRunner
-from haijia_api.conifig import *
+from conifig import *
 
 suit = unittest.defaultTestLoader.discover("demo", pattern="demo_ddt*.py")
 
@@ -9,4 +9,4 @@ fp = open(resultPath, 'wb')
 #
 runner = HTMLTestRunner(stream=fp, title='Test Report', description='Test Description', tester='胡晓静',verbosity=2)
 runner.run(suit)
-print('1313131131313331')
+

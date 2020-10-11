@@ -1,4 +1,4 @@
-from haijia_api.lib.unitLib import add_unit, list_unit
+from lib.unitLib import add_unit, list_unit
 import pprint
 
 # 1、通过新增返回的id判断新增是否通过

@@ -1,5 +1,5 @@
 import requests
-from haijia_api.conifig import *
+from conifig import *
 
 hearData = {"auth-token": "5968bdc07ac8460c843f3793674d2efe",
             "Content-Type": "application/json"}

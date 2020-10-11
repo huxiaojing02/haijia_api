@@ -1,6 +1,6 @@
 import requests
 import pprint
-from haijia_api.lib.caseLog import *
+from lib.caseLog import *
 
 
 def add_unit(case_name, api, hearData, code, name, isBase, preci, sortNum):

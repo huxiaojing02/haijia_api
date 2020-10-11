@@ -1,5 +1,5 @@
 import json
-from conifig import *
+from haijia_api.conifig import *
 
 
 def log_casxe_info(case_name, url, data, expect_res):

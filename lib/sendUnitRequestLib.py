@@ -1,6 +1,6 @@
 import time
-from lib.unitLib import *
-from lib.loginLib import login
+from haijia_api.lib.unitLib import *
+from haijia_api.lib.loginLib import login
 
 
 def sendUnitRequest(rows):

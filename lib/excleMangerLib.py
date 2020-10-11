@@ -1,5 +1,5 @@
 import xlrd
-from lib.sendUnitRequestLib import *
+from haijia_api.lib.sendUnitRequestLib import *
 from xlutils.copy import copy
 
 

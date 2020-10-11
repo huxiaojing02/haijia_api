@@ -1,5 +1,5 @@
 import requests
-from conifig import HOST
+from haijia_api.conifig import HOST
 
 
 headData = {"Content-Type": "application/json"}

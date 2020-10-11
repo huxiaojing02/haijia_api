@@ -1,6 +1,6 @@
 import requests
 import pprint
-from lib.caseLog import *
+from haijia_api.lib.caseLog import *
 
 
 def add_unit(case_name, api, hearData, code, name, isBase, preci, sortNum):
@@ -42,7 +42,7 @@ def list_unit(case_name, api, hearData, name, pageIndex, pageSize):
     try:
         # r = requests.post(f'{HOST}/unit/list', data=listData, headers=hearData)
         url = f'{HOST}' + api
-        r = requests.post(url, data=listData, headers=hearData)
+        r = requests.post(url, data=listData.encode(), headers=hearData)
         log_casxe_info(case_name, url, listData, r.text)
         return r.json()
     except:

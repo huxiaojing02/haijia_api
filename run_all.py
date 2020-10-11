@@ -1,6 +1,6 @@
 import unittest
 from AqiHTMLTestRunner import HTMLTestRunner
-from conifig import *
+from haijia_api.conifig import *
 
 suit = unittest.defaultTestLoader.discover("demo", pattern="demo_ddt*.py")
 

@@ -14,7 +14,7 @@ date_time = str(datetime.now().strftime("%Y%m%d%H%M%S"))
 # log_file = os.path.join(prj_path, 'log', 'log.txt')
 # report_file = os.path.join(prj_path, 'report', 'report.html')
 log_file = os.path.join(prj_path, 'log', 'log'+date_time+'.txt')
-report_file = os.path.join(prj_path, 'report', '接口自动化测试报告'+date_time+'.html')
+report_file = os.path.join(prj_path, 'report', '接口自动化测试报告.html')
 excel_Path = os.path.join(prj_path,'data','海佳单位接口测试用例.xls')
 save_excel_Path = os.path.join(prj_path, 'report', '海佳单位接口测试用例结果'+date_time+'.xls')
 
